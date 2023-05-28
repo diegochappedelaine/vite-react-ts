@@ -17,12 +17,12 @@ $> yarn build
 
 ## Stack
 
-- (Vite)[https://vitejs.dev/]
-- (React)[https://reactjs.org/]
-- (Typescript)[https://www.typescriptlang.org/]
-- (Zustand)[https://github.com/pmndrs/zustand]
+- [Vite](https://vitejs.dev/)
+- [React](https://reactjs.org/)
+- [Typescript](https://www.typescriptlang.org/)
+- [Zustand](https://github.com/pmndrs/zustand)
 
 Testing:
 
-- (Vitest)[https://vitest.dev/]
-- (React Testing Library)[https://testing-library.com/docs/react-testing-library/intro/]
+- [Vitest](https://vitest.dev/)
+- [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)

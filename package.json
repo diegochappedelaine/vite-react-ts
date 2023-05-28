@@ -10,14 +10,29 @@
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "test": "vitest --coverage",
-    "test:ui": "vitest --ui"
+    "test:ui": "vitest --ui",
+    "test:run": "vitest run",
+    "postinstall": "is-ci || husky install",
+    "prepare": "husky install"
   },
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "zustand": "^4.3.8"
   },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "lint-staged": {
+    "./**/*.{ts,tsx,js,jsx}": [
+      "prettier --cache --fix-dry-run"
+    ]
+  },
   "devDependencies": {
+    "@commitlint/cli": "^17.6.3",
+    "@commitlint/config-conventional": "^17.6.3",
     "@testing-library/dom": "^9.3.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
@@ -36,7 +51,10 @@
     "eslint-plugin-react-refresh": "^0.3.4",
     "eslint-plugin-testing-library": "^5.11.0",
     "eslint-plugin-vitest": "^0.2.5",
+    "husky": "^8.0.3",
+    "is-ci": "^3.0.1",
     "jsdom": "^22.0.0",
+    "lint-staged": "^13.2.2",
     "prettier": "^2.8.8",
     "typescript": "^5.0.2",
     "vite": "^4.3.2",
